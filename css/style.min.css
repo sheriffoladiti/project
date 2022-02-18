@@ -6,20 +6,20 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Georgia', sans-serif;
   font-weight: 300;
   color: #000;
   background-color: #f4ede5; }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Italic', sans-serif;
   font-weight: 400; }
 
 h1, h2 {
   font-weight: 700; }
 
 .subheading {
-  color: #f34949; }
+  color: #000; }
 
 .bg-white {
   background-color: #fff; }
@@ -28,7 +28,7 @@ h1, h2 {
   background-color: #f7f8f9; }
 
 a {
-  color: #f34949; }
+  color: #000; }
 
 a:focus,
 button:focus {
@@ -145,10 +145,10 @@ a:hover {
   .hero-info li {
     padding-right: 15px;
     padding-left: 15px; }
-  .hero-info .lnr {
+  /* .hero-info .lnr {
     display: block;
     font-size: 32px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px; } */
 
 .hero-carousel .owl-prev, .hero-carousel .owl-next {
   width: 110px;
@@ -231,7 +231,7 @@ a:hover {
 .testi-content {
   text-align: center; }
   .testi-content .testi-text {
-    font-style: italic;
+    font-style: georgia;
     font-weight: 300;
     line-height: 1.6;
     padding: 30px 60px;
