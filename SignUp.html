@@ -117,6 +117,9 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link" href="SignIn.html">Sign in</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="SignUp.html">Sign Up</a>
+                    </li>
                 </div>
                 <li class="nav-item">
                     <!-- <a id="side-search-open" class="nav-link" href="#"> -->
@@ -137,21 +140,33 @@
                             Make order
                         </span> -->
                         <h2>
-                            Login
+                            Sign up
                         </h2>
                     </div>
                     <form method="post" name="contact-us" action="">
                         <div class="row">
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="First Name">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Last Name">
                             </div>
                             <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="login" name="login" placeholder="Login">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Username/Email">
                             </div>
-                            <div class="col-md-6 form-group">
+                            <div class="col-md-12 form-group">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter Password">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" placeholder="Phone Number">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Address" name="Address" placeholder="Address">
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="Postcode" name="Postcode" placeholder="Postcode">
+                            </div>
+                            <!-- <div class="col-md-6 form-group">
                                 <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
                                     <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" placeholder="Date" />
                                     <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
@@ -159,36 +174,20 @@
                                             <span class="lnr lnr-calendar-full"></span>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                 </div>
+                            </div> -->
 
-                            <div class="col-md-6 form-group">
-                                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
-                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" placeholder="Time" />
-                                    <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
-                                        <div class="input-group-text">
-                                            <span class="lnr lnr-clock"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-12 form-group">
-                                <select class="form-control" id="selectPerson">
-                                    <option></option>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                </select>
-                            </div>
+                          
                  
-                            <div class="col-md-12 form-group">
+                            <!-- <div class="col-md-12 form-group">
                                 <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
                             </div>
-                            <div class="col-md-12 text-center">
-                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Send Message</button>
+                            <div class="col-md-12 text-center"> -->
+                                <div>
+                                <legend>Gender:</legend> <label for="male">Male</label> <input type="radio" name="gender" id="male" value="male">
+                                <legend<label for="female">Female</label> <input type="radio" name="gender" id="female" value="female">
+                            </div>
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Submit</button>
                             </div>
                         </div>
                     </form>
