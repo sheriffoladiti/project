@@ -7,7 +7,7 @@
 
 <head>
 
-    <!-- <meta charset="utf-8"> -->
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Resto - Restaurant Bootstrap 4 Template by GetTemplates.co</title>
     <meta name="description" content="Resto">
@@ -39,7 +39,7 @@
 	
 	<!-- <div class="sidenav-content">
 		<p>
-			Kuncen WB1
+			Kuncen WB1, Wirobrajan 10010, DIY
 		</p>
 		<p>
 			<span class="fs-16 primary-color">(+68) 120034509</span>
@@ -71,15 +71,15 @@
         <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="/">
             <img src="img/logo.png" alt="">
         </a>
-        <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="lnr lnr-menu"></span>
-        </button> -->
+        </button>
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-between">
                 <li class="nav-item only-desktop">
-                    <a class="nav-link" id="side-nav-open" href="#">
-                        <!-- <span class="lnr lnr-menu"></span> -->
+                    <!-- <a class="nav-link" id="side-nav-open" href="#">
+                        <span class="lnr lnr-menu"></span> -->
                     </a>
                 </li>
                 <div class="d-flex flex-lg-row flex-column">
@@ -89,17 +89,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">Who we are</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="DealMeal.html">Deal Meal</a>
-                    </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          <!-- Deal Meal -->
+                          Deal Meal
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="Veg.html">Vegetarian</a>
-                          <a class="dropdown-item" href="NonVeg.html">Non-Vegetarian</a>
+                          <a class="dropdown-item" href="special-dishes.html">Vegeterian</a>
+                          <a class="dropdown-item" href="special-dishes.html">Non-vegeterian</a>
                         </div>
                     </li>
                 </div>
@@ -118,73 +115,96 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="SignIn.html">Sign In</a>
+                        <a class="nav-link" href="SignIn.html">Sign in</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="SignUp.html">Sign Up</a>
-                       </li>
                 </div>
                 <li class="nav-item">
-                    <a id="side-search-open" class="nav-link" href="#">
-                        <!-- <span class="lnr lnr-magnifier"></span> -->
-                    </a>
+                    <!-- <a id="side-search-open" class="nav-link" href="#"> -->
+                        <!-- <span class="lnr lnr-magnifier"></span>
+                    </a> -->
                 </li>
             </ul>
         </div>
     </div>
-</nav>		<!-- Welcome Section -->
-<section id="gtco-welcome" class="bg-white section-padding">
+</nav>		<!-- Reservation Section -->
+<section id="gtco-reservation" class="bg-fixed bg-white section-padding overlay" style="background-image: url(img/reservation-bg.jpg);">
     <div class="container">
-        <div class="section-content">
-            <div class="row">
-                <div class="col-sm-5 img-bg d-flex shadow align-items-center justify-content-center justify-content-md-end img-2" style="background-image: url(img/welcome.png);">
-                    
-                </div>
-                <div class="col-sm-7 py-5 pl-md-0 pl-4">
-                    <div class="heading-section pl-lg-5 ml-md-5">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-content bg-white p-5 shadow">
+                    <div class="heading-section text-center">
                         <!-- <span class="subheading">
-                            About
+                            Make order
                         </span> -->
                         <h2>
-                            Welcome!
+                            Login
                         </h2>
                     </div>
-                    <div class="pl-lg-5 ml-md-5">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <h3 class="mt-5">We recommend</h3>
+                    <form method="post" name="contact-us" action="">
                         <div class="row">
-                            <div class="col-4">
-                                <a href="#" class="thumb-menu">
-                                    <img class="img-fluid img-cover" src="img/fruits.png" />
-                                    <h6>Fruits</h6>
-                                </a>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
                             </div>
-                            <div class="col-4">
-                                <a href="#" class="thumb-menu">
-                                    <img class="img-fluid img-cover" src="img/pizza.png" />
-                                    <h6>Pizza</h6>
-                                </a>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
                             </div>
-                            <div class="col-4">
-                                <a href="#" class="thumb-menu">
-                                    <img class="img-fluid img-cover" src="img/pancakes.png"/>
-                                    <h6>Pancakes</h6>
-                                </a>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="login" name="login" placeholder="Login">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <div class="input-group date" id="datetimepicker4" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" placeholder="Date" />
+                                    <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
+                                        <div class="input-group-text">
+                                            <span class="lnr lnr-calendar-full"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 form-group">
+                                <div class="input-group date" id="datetimepicker3" data-target-input="nearest">
+                                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker3" placeholder="Time" />
+                                    <div class="input-group-append" data-target="#datetimepicker3" data-toggle="datetimepicker">
+                                        <div class="input-group-text">
+                                            <span class="lnr lnr-clock"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12 form-group">
+                                <select class="form-control" id="selectPerson">
+                                    <option></option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                 
+                            <div class="col-md-12 form-group">
+                                <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your Message ..."></textarea>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <button class="btn btn-primary btn-shadow btn-lg" type="submit" name="submit">Send Message</button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
+        
     </div>
 </section>
-<!-- End of Welcome Section -->		<footer class="mastfoot pb-5 bg-white section-padding pb-0">
+<!-- End of Reservation Section -->		<footer class="mastfoot pb-5 bg-white section-padding pb-0">
     <div class="inner container">
          <div class="row">
          	<div class="col-lg-4">
          		<div class="footer-widget pr-lg-5 pr-0">
          			<img src="img/logo.png" class="img-fluid footer-logo mb-3" alt="">
-	         		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	         		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
 	         		<!-- <nav class="nav nav-mastfoot justify-content-start">
 		                <a class="nav-link" href="#">
 		                	<i class="fab fa-facebook-f"></i>
@@ -215,8 +235,8 @@
          		
          	</div>
 
-         	<!-- <div class="col-lg-4">
-         		<div class="footer-widget pl-lg-5 pl-0">
+         	<div class="col-lg-4">
+         		<!-- <div class="footer-widget pl-lg-5 pl-0">
          			<h4>Newsletter</h4>
 	         		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 	         		<form id="newsletter">

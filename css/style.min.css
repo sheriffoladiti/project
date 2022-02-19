@@ -6,20 +6,20 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Georgia', sans-serif;
   font-weight: 300;
   color: #000;
   background-color: #f4ede5; }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Italic', sans-serif;
   font-weight: 400; }
 
 h1, h2 {
   font-weight: 700; }
 
 .subheading {
-  color: #f34949; }
+  color: #000; }
 
 .bg-white {
   background-color: #fff; }
@@ -28,7 +28,7 @@ h1, h2 {
   background-color: #f7f8f9; }
 
 a {
-  color: #f34949; }
+  color: #000; }
 
 a:focus,
 button:focus {
@@ -56,7 +56,7 @@ a:hover {
     padding-bottom: 65px; }
   @media (min-width: 992px) {
     .boxed-page .section-padding {
-      padding-top: 130px;
+      padding-top: 15px;
       padding-bottom: 130px; } }
 
 @media (min-width: 1200px) {
@@ -76,10 +76,10 @@ a:hover {
   padding-left: 70px;
   padding-right: 70px; }
   .navbar-brand-center img {
-    height: 50px; }
+    height: 90px; }
 
 .footer-logo {
-  height: 50px; }
+  height: 90px; }
 
 .nav-link {
   color: #000; }
@@ -145,10 +145,10 @@ a:hover {
   .hero-info li {
     padding-right: 15px;
     padding-left: 15px; }
-  .hero-info .lnr {
+  /* .hero-info .lnr {
     display: block;
     font-size: 32px;
-    margin-bottom: 15px; }
+    margin-bottom: 15px; } */
 
 .hero-carousel .owl-prev, .hero-carousel .owl-next {
   width: 110px;
@@ -231,7 +231,7 @@ a:hover {
 .testi-content {
   text-align: center; }
   .testi-content .testi-text {
-    font-style: italic;
+    font-style: georgia;
     font-weight: 300;
     line-height: 1.6;
     padding: 30px 60px;
@@ -334,7 +334,7 @@ a:hover {
 ===================================*/
 #gtco-reservation {
   height: 650px;
-  margin-bottom: 200px; }
+  margin-bottom: 0px; }
 
 #selectPerson + .select2-container--default .select2-selection--single .select2-selection__rendered {
   line-height: 36px;
