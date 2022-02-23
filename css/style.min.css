@@ -436,7 +436,8 @@ a:hover {
 ======================================*/
 #gtco-special-dishes .special-number {
   position: relative;
-  font-size: 60px; }
+  font-size: 60px; 
+}
   #gtco-special-dishes .special-number:after {
     content: '';
     position: absolute;
