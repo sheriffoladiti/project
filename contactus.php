@@ -1,4 +1,4 @@
-<?php include("connection.php") ?>
+<?php include("connectionkate.php") ?>
 
 
 <!DOCTYPE html>
@@ -99,11 +99,11 @@
 
                     <li class="nav-item dropdown">
                         
-                        <a class="nav-link" href="SignIn.html">Sign In</a>
+                        <a class="nav-link" href="SignIn.php">Sign In</a>
                     </li>
                     <li class="nav-item dropdown">
                         
-                        <a class="nav-link" href="SignUp.html">Sign Up</a>
+                        <a class="nav-link" href="SignUp.php">Sign Up</a>
                     </li>
 
                     <li class="nav-item dropdown">

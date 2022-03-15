@@ -1,5 +1,5 @@
 <?php
- include("connection.php");
+ include("connectionkate.php");
 
 if (empty($_POST['email']) || empty($_POST['message'])) {
      echo "Both fields are required.";
