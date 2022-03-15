@@ -164,7 +164,8 @@
                         
                                 <button class="btn btn-primary btn-shadow btn-lg"type="submit" name="reg_user">Sign up</button> 
 
-					<p>By continuing, you agree to our <a href ="#">Terms & Conditions and Privacy Policy. </a>  </P>  
+					<p>By continuing, you agree to our <a href ="#">Terms & Conditions and Privacy Policy. </a>  </P> 
+					<p>Your information is important to us, we will not use it for commercial purpose or sell this information to a third-party  </P>
   	</div>
 
       </div>
