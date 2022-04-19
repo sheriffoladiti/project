@@ -125,9 +125,6 @@
                 </div>
                 <div class="col-sm-7 py-5 pl-md-0 pl-4">
                     <div class="heading-section pl-lg-5 ml-md-5">
-                        <!-- <span class="subheading">
-                            About
-                        </span> -->
                         <h2>
                             Welcome!
                         </h2>

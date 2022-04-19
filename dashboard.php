@@ -213,7 +213,6 @@ $rows = mysqli_fetch_all( $result, MYSQLI_ASSOC ); // get data
 
                                     </div>
                                 </div>    
-                                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
 
                             </form>
                         </div>
@@ -288,20 +287,7 @@ $rows = mysqli_fetch_all( $result, MYSQLI_ASSOC ); // get data
                         </div>
                     </div>
                      
-                    
-                    <!-- <div class="col-md-12 d-flex align-items-center"> -->
-                        <!-- notification message -->
-                        <?php // if (isset($_SESSION['success'])) : ?>
-                           <!-- <div class="error success">
-                                <h3>
-                                    <?php 
-                                        // echo $_SESSION['success']; 
-                                        // unset($_SESSION['success']);
-                                    ?>
-                                </h3>
-                            </div> -->
-                        <?php // endif ?>
-                     <!--</div> -->
+
             
                 </div>
             <!-- </div> -->

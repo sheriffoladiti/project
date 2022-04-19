@@ -1,4 +1,6 @@
-<?php include('connection.php') ?>
+<?php include("connection.php") ?>
+
+
 <!DOCTYPE html>
 <!--
 	Resto by GetTemplates.co
@@ -35,7 +37,9 @@
 
 </head>
 <body data-spy="scroll" data-target="#navbar">
-	<div id="side-nav" class="sidenav">
+
+	
+    <div id="side-nav" class="sidenav">
 	<a href="javascript:void(0)" id="side-nav-close">&times;</a>
 
 </div>	<div id="side-search" class="sidenav">
@@ -69,8 +73,8 @@
 
         <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
             <ul class="navbar-nav d-flex justify-content-between">
-                <li class="nav-item only-desktop">
-                </li>
+                <li class="nav-item only-desktop"></li>
+
                 <div class="d-flex flex-lg-row flex-column">
                     <li class="nav-item active">
                         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
@@ -94,89 +98,31 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="<?php echo isset($_SESSION['username']) ? 'dashboard.php' : 'SignIn.php' ?>"><?php echo isset($_SESSION['username']) ? 'Account' : 'Sign In' ?></a>
-                    </li>
-                    <?php if (!isset($_SESSION['username'])) : ?>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link" href="SignUp.php">Sign Up</a>
-                        </li>
-                    <?php endif; ?>
-                       <li class="nav-item dropdown">
                         
                         <a class="nav-link" href="contactus.php">Contact Us</a>
                     </li>
                 </div>
+                <li class="nav-item"></li>
             </ul>
         </div>
     </div>
-</nav>		<!-- Team Section -->
-<section id="gtco-team" class="bg-white section-padding">
+</nav>		<!-- Reservation Section -->
+<section id="gtco-reservation" class="bg-fixed bg-white section-padding overlay" style="background-image: none; padding-top: 60px;">
     <div class="container">
-        <div class="section-content">
-            <div class="heading-section text-center">
-                <h2>
-                    Our Team
-                </h2>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="team-card mb-5">
-                        <img class="img-fluid" src="img/chief1.png" alt="">
-                        <div class="team-desc">
-                            <h4 class="mb-0">Ekaterina Shevchenko</h4>
-                            <p class="mb-1">CEO</p>
-                        </div>
+        <div class="row justify-content-md-center">
+            <div class="col-lg-10">
+                <div class="section-content bg-white p-5 shadow">
+                    <div class="heading-section text-center">
+                        <h2>Thank you for your patronage. </h2> <br>
+                        <h3>Your order is being processed.</h3>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="team-card mb-5">
-                        <img class="img-fluid" src="img/chief2.png" alt="">
-                        <div class="team-desc">
-                            <h4 class="mb-0">Rani Diksha</h4>
-                            <p class="mb-1">CFO</p>
-                            
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-card mb-5">
-                        <img class="img-fluid" src="img/chief3.png" alt="">
-                        <div class="team-desc">
-                            <h4 class="mb-0">Jerry Ademi</h4>
-                            <p class="mb-1">COOK</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="team-card mb-5">
-                        <img class="img-fluid" src="img/chief4.png" alt="">
-                        <div class="team-desc">
-                            <h4 class="mb-0">Michael Chima</h4>
-                            <p class="mb-1">Chief Cook</p>
             </div>
         </div>
+        
     </div>
-<div class="col-md-4">
-<div class="team-card mb-5">
-    <img class="img-fluid" src="img/chief5.png" alt="">
-    <div class="team-desc">
-        <h4 class="mb-0">Chisom Ilekuba</h4>
-        <p class="mb-1">Chef</p>
-    </div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="team-card mb-5">
-    <img class="img-fluid" src="img/chief6.png" alt="">
-    <div class="team-desc">
-        <h4 class="mb-0">Sheriff Oladiti</h4>
-        <p class="mb-1">Chef</p>
-    </div>
-</div>
-</div>
-
 </section>
-<!-- End of Team Section -->		<footer class="mastfoot pb-5 bg-white section-padding pb-0">
+<!-- End of Reservation Section -->		<footer class="mastfoot pb-5 bg-white section-padding pb-0">
     <div class="inner container">
          <div class="row">
          	<div class="col-lg-6">
@@ -184,17 +130,20 @@
          			<img src="img/logo.png" class="img-fluid footer-logo mb-3" alt="">
 	         		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
          		</div>
-         		
          	</div>
+
          	<div class="col-lg-6">
-         		<div class="footer-widget px-0"> 
+         		<div class="footer-widget px-0">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2166.0629592662335!2d-2.1355488842593884!3d57.11888738094067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48841030d202dc7b%3A0x57e0a73cdda87ad0!2sRGU%20Engineering!5e0!3m2!1sru!2suk!4v1646410956499!5m2!1sru!2suk" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
+                
+                
                 <p style="font-size: 1.2em;">
                     <a href="tel:+441111111111"><strong>Tel:<i> +44 1111 111111</i></strong></a>
                 </p>
-         		
          	</div>
+
+         	<!-- <div class="col-lg-4"></div> -->
          	<div class="col-md-12 d-flex align-items-center">
          		<p class="mx-auto text-center mb-0">TEAM Q. Design by <a href="https://gettemplates.co" target="_blank">GetTemplates</a></p>
          	</div>
