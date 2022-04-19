@@ -31,6 +31,60 @@
 
     <!-- Modernizr JS for IE8 support of HTML5 elements and media queries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <style>
+        .defaultHide{
+            display: none;
+        }
+        .quantity {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding: 0;
+}
+.quantity__minus,
+.quantity__plus {
+  display: block;
+  width: 30px;
+    height: 30px;
+    margin: 0;
+    background: #dee0ee;
+    text-decoration: none;
+    text-align: center;
+    line-height: 29px;
+}
+.quantity__minus:hover,
+.quantity__plus:hover {
+  background: #575b71;
+  color: #fff;
+} 
+.quantity__minus {
+  border-radius: 3px 0 0 3px;
+}
+.quantity__plus {
+  border-radius: 0 3px 3px 0;
+}
+.quantity__input {
+  width: 32px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-top: 2px solid #dee0ee;
+  border-bottom: 2px solid #dee0ee;
+  border-left: 1px solid #dee0ee;
+  border-right: 2px solid #dee0ee;
+  background: #fff;
+  color: #8184a1;
+}
+.quantity__minus:link,
+.quantity__plus:link {
+  color: #8184a1;
+} 
+.quantity__minus:visited,
+.quantity__plus:visited {
+  color: #fff;
+}
+    </style>
 
 </head>
 <body data-spy="scroll" data-target="#navbar">
@@ -124,7 +178,20 @@
             <h3><span>Bavarian Sausages</span><br>Stewed cabbage and mash potato</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£30.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+                
+            </div>
+            
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -139,7 +206,17 @@
             <h3><span>Meat stew</span><br>Zucchini and carrot</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£27.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -154,7 +231,18 @@
             <h3><span>Ravioli</span><br>Minced meat and tomato sauce</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£32.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -169,7 +257,18 @@
             <h3><span>Meat plate</span><br>Meat assorti</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£20.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -184,7 +283,18 @@
             <h3><span>Pizza</span><br>Pizza with jamon and figs</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£15.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -199,7 +309,18 @@
             <h3><span>Pasta</span><br>Сoconut and asparagus sauce</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£25.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -214,7 +335,18 @@
             <h3><span>Salad</span><br>Сornichon and peaches</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£16.00</h3>
-            <a href="foodorder.html#" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html#" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -229,7 +361,18 @@
             <h3><span>Pancakes</span><br>Sweet pancakes with honey dressing</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£12.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -244,7 +387,18 @@
             <h3><span>Mac and cheese</span><br>Macaroni with cheese and walnuts</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£22.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -259,7 +413,18 @@
             <h3><span>Noodle</span><br>Noodle with vegetables and soy sauce</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£14.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -274,7 +439,18 @@
             <h3><span>Fruits</span><br>Seasonal fruits</h3>
             <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
             <h3 class="special-dishes-price">£10.00</h3>
-            <a href="foodorder.html" class="btn-primary mt-3">Order</a>
+            <!-- <a href="foodorder.html" class="btn-primary mt-3">Order</a> -->
+            <div class="btnParent">
+                <a href="#!" class="btn-primary mt-3 addCartBtn">add to cart</a>
+                <!-- <a href="#!" class="btn-primary mt-3 incrDecrBtn defaultHide">increment</a> -->
+                <div class="defaultHide incrDecrBtn">
+                    <div class="quantity">
+                        <a href="#" class="quantity__minus"><span>-</span></a>
+                        <input name="quantity" type="text" class="quantity__input" value="1">
+                        <a href="#" class="quantity__plus"><span>+</span></a>
+                    </div>
+                </div>
+            </div>
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
@@ -327,5 +503,43 @@
 
 	<!-- Main JS -->
 	<script src="js/app.min.js "></script>
+
+<script>
+    $(".addCartBtn").on("click",function(){
+        $(this).hide();
+        $(this).parents('.btnParent').find('.incrDecrBtn').show();
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        const minus = $('.quantity__minus');
+        const plus = $('.quantity__plus');
+        // const input = $('.quantity__input');
+        minus.click(function(e) {
+            e.preventDefault();
+            let input = $(this).siblings('.quantity__input');
+            var value = input.val();
+            value--;
+            if (value > 0) {
+                input.val(value);
+            }
+            else{
+                $(this).parents(".incrDecrBtn").hide();
+                $(this).parents('.btnParent').find('.addCartBtn').show();
+            }
+            
+        });
+        
+        plus.click(function(e) {
+            e.preventDefault();
+            let input = $(this).siblings('.quantity__input');
+            var value = input.val();
+            value++;
+            input.val(value);
+        })
+    });
+</script>
+
 </body>
 </html>

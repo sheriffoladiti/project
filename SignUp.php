@@ -76,14 +76,14 @@
                             </li>
                             <div class="d-flex flex-lg-row flex-column">
                                 <li class="nav-item active">
-                                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="about.html">Who we are</a>
+                                    <a class="nav-link" href="about.php">Who we are</a>
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="menu.html">Menu</a>
+                                    <a class="nav-link" href="menu.php">Menu</a>
                                 </li>
                                 
                             </div>
@@ -96,15 +96,17 @@
                             <div class="d-flex flex-lg-row flex-column">
                                 
                                 <li class="nav-item">
-                                    <a class="nav-link" href="team.html">Team</a>
+                                    <a class="nav-link" href="team.php">Team</a>
                                 </li>
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link" href="SignIn.php">Sign in</a>
+                                    <a class="nav-link" href="<?php echo isset($_SESSION['username']) ? 'dashboard.php' : 'SignIn.php' ?>"><?php echo isset($_SESSION['username']) ? 'Account' : 'Sign In' ?></a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link" href="SignUp.php">Sign Up</a>
-                                </li>
+                                <?php if (!isset($_SESSION['username'])) : ?>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link" href="SignUp.php">Sign Up</a>
+                                    </li>
+                                <?php endif; ?>
                                 <li class="nav-item dropdown">
                                     
                                     <a class="nav-link" href="contactus.php">Contact Us</a>
@@ -130,6 +132,12 @@
                                     </span> -->
                                     <h2>Sign up</h2>
                                 </div>
+                                
+                                <?php 
+
+  //!!!!!!!!!!! при регистрации пользователь нажав на страницу регистрации саму форму не увидит//
+                                if (!isset($_SESSION['username'])) : ?>
+
                                 <form method="post" action="signup.php">
                                 <?php include('errors.php'); ?>
                                 <div class="input-group">
@@ -173,6 +181,8 @@
 
   	</p>
   </form>
+  
+  <?php endif; ?>
                                 
                             </div>
                         </div>

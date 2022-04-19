@@ -12,7 +12,7 @@ $gender = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', '', 'groupq');
+$db = mysqli_connect('localhost', 'root', 'root', 'team_project'); //!!!!!!!!!//
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -25,10 +25,8 @@ if (isset($_POST['reg_user'])) {
   $phonenumber = $_POST['phonenumber'];
   $postcode = $_POST['postcode'];
   $address = $_POST['address'];
- @$gender = $_POST['gender'];
+  $gender = $_POST['gender']; //!!!!!!!!!//
   
-
-
 
   
   // form validation: ensure that the form is correctly filled ...
@@ -65,12 +63,21 @@ if (isset($_POST['reg_user'])) {
 
   $query = "INSERT INTO users (fullname, username, email, password, phonenumber, postcode, address, gender) 
         VALUES('$fullname', '$username', '$email', '$password', '$phonenumber', '$postcode', '$address', '$gender')";
-  mysqli_query($db, $query);
-  $_SESSION['username'] = $username;
-  $_SESSION['success'] = "You are now logged in";
-  header('location: dashboard.php');
+  $result = mysqli_query($db, $query);
+
+  if ($result) {
+    $_SESSION['username'] = $username;
+    $_SESSION['success'] = "You are now logged in";
+    //var_dump($_POST, $_SESSION, $result);
+    //exit;
+    header('location: dashboard.php'); 
+  } else {
+    header('location: SignUp.php');
+  }
 }
 }
+
+
 
 // LOGIN USER
 if (isset($_POST['login_user'])) {
@@ -97,5 +104,4 @@ if (isset($_POST['login_user'])) {
   	}
   }
 }
-
 ?>
