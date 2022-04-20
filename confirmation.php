@@ -1,5 +1,8 @@
-<?php include("connection.php") ?>
+<?php 
+include("connection.php") ;
 
+    $msg = isset($_GET['msg'])? $_GET['msg']: null;
+?>
 
 <!DOCTYPE html>
 <!--
@@ -96,7 +99,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="team.php">Team</a>
                     </li>
-
+                    <li class="nav-item dropdown">
+                                    <a class="nav-link" href="<?php echo isset($_SESSION['username']) ? 'dashboard.php' : 'SignIn.php' ?>"><?php echo isset($_SESSION['username']) ? 'Account' : 'Sign In' ?></a>
+                                </li>
                     <li class="nav-item dropdown">
                         
                         <a class="nav-link" href="contactus.php">Contact Us</a>
@@ -113,8 +118,24 @@
             <div class="col-lg-10">
                 <div class="section-content bg-white p-5 shadow">
                     <div class="heading-section text-center">
-                        <h2>Thank you for your patronage. </h2> <br>
-                        <h3>Your order is being processed.</h3>
+                        <?php 
+                            if($msg == "success")
+                            {
+                        ?>
+                                <h2 class="text-success">Thank you for your patronage. </h2> <br>
+                                <h3>Your order is being processed.</h3>
+                        <?php
+                            }else{
+
+                                ?>
+                                    <h2 class="text-danger">Please Try Again</h2> <br>
+                                    <h3>Order Process Failed</h3>
+
+                                <?php
+                                
+                            }
+                        
+                        ?>
                     </div>
                 </div>
             </div>

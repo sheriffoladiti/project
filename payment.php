@@ -1,4 +1,31 @@
-<?php include('connection.php') ?>
+<?php 
+include('connection.php');
+
+if (!isset($_SESSION['username'])) {
+   	$_SESSION['msg'] = "You must log in first";
+   	header('location: SignIn.php');
+}
+if (isset($_GET['logout'])) {
+   	session_destroy();
+   	unset($_SESSION['username']);
+   	header("location: index.php");
+}
+        require_once "./includes/functions.php";
+        $oid = isset($_GET['oid'])? base64_decode($_GET['oid']) : null;
+        $oid == null? header("location: menu.php") : null;
+        $db = mysqli_connect('localhost', 'root', '', 'team_project'); //!!!!!!!!!//
+        $order_check_query = "SELECT * FROM orders WHERE orderid='$oid'";
+        $result = mysqli_query($db, $order_check_query);
+        if(mysqli_num_rows($result) !== 1)
+        {
+            header("location: menu.php");
+        }
+        $row = mysqli_fetch_assoc($result);
+
+
+        // Place Order
+        makePayment();
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -133,42 +160,47 @@
                                     <h2>Enter Payment Details</h2>
                                 </div>
                                 
-                                <?php 
+                            
 
-  //!!!!!!!!!!! при регистрации пользователь нажав на страницу регистрации саму форму не увидит//
-                                if (!isset($_SESSION['username'])) : ?>
+  <!-- //!!!!!!!!!!! при регистрации пользователь нажав на страницу регистрации саму форму не увидит// -->
 
-                                <form method="post" action="payment.php">
-                                <?php include('errors.php'); ?>
+                                <?php //include('errors.php'); ?>
                                 <div class="input-group">
                              <div class="containercard p-0">
     <div class="card px-4">
         <p class="h8 py-3">Payment Details</p>
+        <form method="post">
         <div class="row gx-3">
             <div class="col-12">
                 <div class="d-flex flex-column">
-                    <p class="text mb-1">Person Name</p> <input class="form-control mb-3" type="text" placeholder="Name" value="Barry Allen">
-                </div>
-            </div>
-            <div class="col-12">
-                <div class="d-flex flex-column">
-                    <p class="text mb-1">Card Number</p> <input class="form-control mb-3" type="text" placeholder="1234 5678 435678">
+                    <p class="text mb-1">Person Name</p> <input class="form-control mb-3" type="text" placeholder="Name" name="name" value="Barry Allen">
                 </div>
             </div>
             <div class="col-6">
                 <div class="d-flex flex-column">
-                    <p class="text mb-1">Expiry</p> <input class="form-control mb-3" type="text" placeholder="MM/YYYY">
+                    <p class="text mb-1">Card Number</p> <input class="form-control mb-3 pt-2 " type="int"  maxlength="16" name="card number" placeholder="Card Number">
                 </div>
             </div>
             <div class="col-6">
                 <div class="d-flex flex-column">
-                    <p class="text mb-1">CVV/CVC</p> <input class="form-control mb-3 pt-2 " type="password" placeholder="***">
+                    <p class="text mb-1">Expiry</p> <input class="form-control mb-3" type="int" maxlength="4" name="ed" placeholder="MM/YY">
                 </div>
             </div>
+            <div class="col-6">
+                <div class="d-flex flex-column">
+                    <p class="text mb-1">CVV/CVC</p> <input class="form-control mb-3 pt-2 " type="password"  maxlength="3" name="cvv" placeholder="***">
+                </div>
+            </div>
+
+            </div>
+
             <div class="col-12">
-                <div class="btn btn-primary mb-3"> <span class="ps-3">  <a href="confirmation.php">Pay £30 </a> </span> </div>
+                <input type="hidden" name="oid" value="<?php echo $row['orderid'] ?>">
+                <input type="hidden" name="amount" value="<?php echo $row['cost'] ?>">
+                <span class="ps-3">  <button class="btn btn-primary mb-4" type="submit" name="btn_pay">Pay £ <?php echo $row['cost'] ?> </button> </span>
             </div>
         </div>
+        </form>
     </div>
 
   	</div>
@@ -177,9 +209,7 @@
 
 
   	</p>
-  </form>
-  
-  <?php endif; ?>
+
                                 
                             </div>
                         </div>

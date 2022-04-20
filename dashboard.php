@@ -1,5 +1,6 @@
 <?php 
 include('connection.php');
+require_once "./includes/functions.php";
 
 if (!isset($_SESSION['username'])) {
    	$_SESSION['msg'] = "You must log in first";
@@ -33,10 +34,6 @@ $rows = mysqli_fetch_all( $result, MYSQLI_ASSOC ); // get data
 //get orders
 
 
-$sql = "SELECT * FROM `order` LEFT JOIN paymentmethod ON `order`.paymentmethodid = paymentmethod.paymentmethodid  LEFT JOIN paymentstatus ON `order`.paymentstatusid = paymentstatus.paymentstatusid WHERE uid='$user_id'";
-$result = mysqli_query( $db, $sql ); // get user from database   
-
-$rows = mysqli_fetch_all( $result, MYSQLI_ASSOC ); // get data 
 
 
 //var_dump($rows);
@@ -200,17 +197,6 @@ $rows = mysqli_fetch_all( $result, MYSQLI_ASSOC ); // get data
                                             <label for="postcode" class="form-label">Postcode</label>
                                             <input type="text" class="form-control" name="postcode" value="<?php echo $postcode ?>" id="postcode" readonly>
                                         </div>
-
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gender" id="male" <?php echo $gender = 'male' ? 'checked' : '' ?>>
-                                            <label class="form-check-label" for="male">Male</label>
-                                        </div>
-
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="gender" id="female" <?php echo $gender = 'female' ? 'checked' : '' ?>>
-                                            <label class="form-check-label" for="female">Female</label>
-                                        </div>
-
                                     </div>
                                 </div>    
 
@@ -233,28 +219,10 @@ $rows = mysqli_fetch_all( $result, MYSQLI_ASSOC ); // get data
                                 </thead>
                                 
                                 <tbody>
-                                    <?php foreach ($rows as $order) :
-                                        list( 
-                            
-                                            'orderid'           => $order_id, 
-                                            'foodname'          => $food_name, 
-                                            'amount'            => $amount,
-                                            'datepaid'          => $date,
-                                            'paymenttype'       => $payment_type,
-                                            'paymentstatus'     => $payment_status
-                                        
-                                            ) = $order;   ?>
-                                        <tr>
-                                            <td><?php echo $order_id ?></td>
-                                            <td><?php echo $date ?></td>
-                                            <td><?php echo $food_name ?></td>
-                                            <td><?php echo $amount ?></td>
-                                            <td><?php echo $payment_status ?></td>
-                                            <td><?php echo $payment_type ?></td>
-                                        </tr>
-
-                                    <?php endforeach; ?>
-
+                                    <?php 
+                                    get_orders($_SESSION["username"]) 
+                                    // echo $_SESSION['cur_uid'];
+                                    ?>
                                 </tbody>
 
                             </table>

@@ -12,7 +12,7 @@ $gender = "";
 $errors = array(); 
 
 // connect to the database
-$db = mysqli_connect('localhost', 'root', 'root', 'team_project'); //!!!!!!!!!//
+$db = mysqli_connect('localhost', 'root', '', 'team_project'); //!!!!!!!!!//
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -95,7 +95,11 @@ if (isset($_POST['login_user'])) {
   	$password = ($password);
   	$query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($db, $query);
+
   	if (mysqli_num_rows($results) == 1) {
+      $row = mysqli_fetch_assoc($result);
+      
+      $_SESSION["cur_uid"] = $row['uid'];
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] =  $username;
   	  header('location: dashboard.php');

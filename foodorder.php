@@ -1,3 +1,31 @@
+<?php
+include('connection.php');
+
+if (!isset($_SESSION['username'])) {
+   	$_SESSION['msg'] = "You must log in first";
+   	header('location: SignIn.php');
+}
+if (isset($_GET['logout'])) {
+   	session_destroy();
+   	unset($_SESSION['username']);
+   	header("location: index.php");
+}
+
+        require_once "./includes/functions.php";
+        $fid = isset($_GET['id'])? $_GET['id'] : 1;
+        $db = mysqli_connect('localhost', 'root', '', 'team_project'); //!!!!!!!!!//
+        $user_check_query = "SELECT * FROM food WHERE id='$fid'";
+        $result = mysqli_query($db, $user_check_query);
+        if(mysqli_num_rows($result) !== 1)
+        {
+            header("location: menu.php");
+        }
+        $row = mysqli_fetch_assoc($result);
+
+
+        // Place Order
+        placeOrder();
+    ?>
 <!DOCTYPE html>
 <!--
 	Resto by GetTemplates.co
@@ -143,14 +171,20 @@
                 <div class="col-lg-5 col-md-6 align-self-center py-5">
                     <!-- <h2 class="special-number">01.</h2> -->
                     <div class="dishes-text">
-                        <h3><span>Bavarian Sausages</span><br>Stewed cabbage and mash potato</h3>
-                        <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
-                        <h3 class="special-dishes-price">£30.00</h3>
-                        <a href="payment.php" class="btn-primary mt-3">Order Now</a>
+                        <h3><span><?php echo $row['name'] ?></span><br><?php echo $row['subname'] ?></h3>
+                        <p class="pt-3"><?php echo $row['description'] ?></p>
+                        <h3 class="special-dishes-price">£<?php echo $row['price'] ?></h3>
+                        <form action="" method="post" class="form">
+                            <input type="hidden" name="fid" value="<?php echo $row['id'] ?>">
+                            <input type="hidden" name="price" value="<?php echo $row['price'] ?>">
+                            <input type="hidden" name="uid" value="<?php echo $_SESSION['username'] ?>">
+                            <input type="number" name="qty"  class="form-control" placeholder="quantity" value="1" min="1">
+                            <button type="submit" name="btn_order" class="btn-primary mt-3">Order Now</button>
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-                    <img src="img/sausage.png" alt="" class="img-fluid shadow w-100">
+                    <img src="img/foods/<?php echo $row['img'] ?>" alt="" class="img-fluid shadow w-100">
                 </div>
             </div>
             </div>

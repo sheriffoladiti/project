@@ -1,4 +1,8 @@
-<?php include('connection.php') ?>
+<?php 
+
+    include('connection.php') ;
+    require_once "./includes/functions.php";
+?>
 <!DOCTYPE html>
 <!--
 	Resto by GetTemplates.co
@@ -61,7 +65,7 @@
 		<nav id="navbar-header" class="navbar navbar-expand-lg">
     <div class="container">
         <a class="navbar-brand navbar-brand-center d-flex align-items-center p-0 only-mobile" href="/">
-            <img src="img/logo.png" alt="">
+            <img src="img/foods/logo.png" alt="">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="lnr lnr-menu"></span>
@@ -85,7 +89,7 @@
             </ul>
             
             <a class="navbar-brand navbar-brand-center d-flex align-items-center only-desktop" href="#">
-                <img src="img/logo.png" alt="">
+                <img src="img/foods/logo.png" alt="">
             </a>
             <ul class="navbar-nav d-flex justify-content-between">
                 <div class="d-flex flex-lg-row flex-column">
@@ -119,51 +123,10 @@
 
                 <h2> Our Menu</h2>
             </div>
-            <div class="row mt-5">
-            <div class="col-lg-5 col-md-6 align-self-center py-5">
-            <h2 class="special-number">01.</h2>
-            <div class="dishes-text">
-            <h3><span>Bavarian Sausages</span><br>Stewed cabbage and mash potato</h3>
-            <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
-            <h3 class="special-dishes-price">£30.00</h3>
-            <a href="foodorder.php" class="btn-primary mt-3">Order</a>
-            </div>
-            </div>
-            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/sausage.png" alt="" class="img-fluid shadow w-100">
-            </div>
-            </div>
 
-            <div class="row mt-5">
-            <div class="col-lg-5 col-md-6 align-self-center py-5">
-            <h2 class="special-number">02.</h2>
-            <div class="dishes-text">
-            <h3><span>Meat stew</span><br>Zucchini and carrot</h3>
-            <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
-            <h3 class="special-dishes-price">£27.00</h3>
-            <a href="foodorder.php" class="btn-primary mt-3">Order</a>
-            </div>
-            </div>
-            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/stew.png" alt="" class="img-fluid shadow w-100">
-            </div>
-            </div>
+                        <?php fetch_menu() ?>
 
-            <div class="row mt-5">
-            <div class="col-lg-5 col-md-6 align-self-center py-5">
-            <h2 class="special-number">03.</h2>
-            <div class="dishes-text">
-            <h3><span>Ravioli</span><br>Minced meat and tomato sauce</h3>
-            <p class="pt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
-            <h3 class="special-dishes-price">£32.00</h3>
-            <a href="foodorder.php" class="btn-primary mt-3">Order</a>
-            </div>
-            </div>
-            <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/ravioli.png" alt="" class="img-fluid shadow w-100">
-            </div>
-            </div>
-
+            <!-- 
             <div class="row mt-5">
             <div class="col-lg-5 col-md-6 align-self-center py-5">
             <h2 class="special-number">04.</h2>
@@ -175,7 +138,7 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/meatplate.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/meatplate.png" alt="" class="img-fluid shadow w-100">
             </div>
             </div>
                                     
@@ -190,7 +153,7 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/pizza1.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/pizza1.png" alt="" class="img-fluid shadow w-100">
             </div>
             </div>
                                         
@@ -205,7 +168,7 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/pasta.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/pasta.png" alt="" class="img-fluid shadow w-100">
             </div>
             </div>
                                             
@@ -220,7 +183,7 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/sal.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/sal.png" alt="" class="img-fluid shadow w-100">
             </div>
             </div>
                                                 
@@ -235,7 +198,7 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/pancakes1.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/pancakes1.png" alt="" class="img-fluid shadow w-100">
             </div>
             </div>
                                                     
@@ -250,7 +213,7 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/mac.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/mac.png" alt="" class="img-fluid shadow w-100">
             </div>
             </div>
                                                         
@@ -265,7 +228,7 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/noodle.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/noodle.png" alt="" class="img-fluid shadow w-100">
             </div>
             </div>
                                                             
@@ -280,9 +243,9 @@
             </div>
             </div>
             <div class="col-lg-5 offset-lg-2 col-md-6 align-self-center mt-4 mt-md-0">
-            <img src="img/fruits1.png" alt="" class="img-fluid shadow w-100">
+            <img src="img/foods/fruits1.png" alt="" class="img-fluid shadow w-100">
             </div>
-            </div>
+            </div> -->
     </div>
 </div>
 </section>
@@ -292,7 +255,7 @@
          <div class="row">
          	<div class="col-lg-6">
          		<div class="footer-widget pr-lg-5 pr-0">
-         			<img src="img/logo.png" class="img-fluid footer-logo mb-3" alt="">
+         			<img src="img/foods/logo.png" class="img-fluid footer-logo mb-3" alt="">
 	         		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et obcaecati quisquam id sit omnis explicabo voluptate aut placeat, soluta, nisi ea magni facere, itaque incidunt modi? Magni, et voluptatum dolorem.</p>
          		</div>
          		
